@@ -21,13 +21,12 @@ Here, I have assumed the list of string.
 
 */
 
-#include <stdio.h>
 #include <conio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 // One Node Structure
-struct Node
-{
+struct Node {
     char name[100];
     struct Node *ptr;
 };
@@ -36,31 +35,25 @@ struct Node
 struct Node *head = NULL;
 
 // Get one Node dynamically
-struct Node *getNode(char name[])
-{
-
+struct Node *getNode(char name[]) {
     struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
     int i = 0;
-    while (name[i])
-    {
+    while (name[i]) {
         newNode->name[i] = name[i];
         i++;
     }
     newNode->ptr = NULL;
 }
 
-int insertAtEnd(char name[])
-{
+int insertAtEnd(char name[]) {
     // That means first node need to be inserted
-    if (head == NULL)
-    {
+    if (head == NULL) {
         head = getNode(name);
         return 1;
     }
 
     struct Node *headCopy = head;
-    while (headCopy->ptr)
-    {
+    while (headCopy->ptr) {
         headCopy = headCopy->ptr;
     }
     headCopy->ptr = getNode(name);
@@ -68,19 +61,15 @@ int insertAtEnd(char name[])
 }
 
 // delete Node at the end of the list
-int deleteAtEnd(struct Node **head)
-{
-
+int deleteAtEnd(struct Node **head) {
     // No Node is available
-    if (*head == NULL)
-    {
+    if (*head == NULL) {
         printf(" No data is available.");
         return 0;
     }
 
     // Only one node is available
-    if ((*head)->ptr == NULL)
-    {
+    if ((*head)->ptr == NULL) {
         free((*head));
         (*head) = NULL;
         return 1;
@@ -89,8 +78,7 @@ int deleteAtEnd(struct Node **head)
     // Save the head Pointer
     struct Node *headCopy = *head;
 
-    while (headCopy->ptr->ptr)
-    {
+    while (headCopy->ptr->ptr) {
         headCopy = headCopy->ptr;
     }
 
@@ -100,27 +88,20 @@ int deleteAtEnd(struct Node **head)
 }
 
 // traverse the list
-void traverse(struct Node *head)
-{
-
-    if (head == NULL)
-    {
+void traverse(struct Node *head) {
+    if (head == NULL) {
         printf(" No data is available.");
         return;
     }
 
-    while (head)
-    {
+    while (head) {
         printf("%s-->", head->name);
         head = head->ptr;
     }
 }
 
-
 // Code starts from here
-int main()
-{
-
+int main() {
     insertAtEnd("nikhil");
     insertAtEnd("Vijay");
     insertAtEnd("Raj");

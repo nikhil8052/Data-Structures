@@ -9,13 +9,12 @@ LinkedList 2-->3-->4-->5
 
 */
 
-#include <stdio.h>
 #include <conio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 // Structure of one Node
-struct Node
-{
+struct Node {
     int data;
     struct Node *ptr;
 };
@@ -24,11 +23,8 @@ struct Node
 struct Node *head = NULL;
 
 // Insert function to insert value at the end
-int insertNode(int val)
-{
-
-    if (head == NULL)
-    {
+int insertNode(int val) {
+    if (head == NULL) {
         struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
         newNode->data = val;
         newNode->ptr = NULL;
@@ -38,8 +34,7 @@ int insertNode(int val)
 
     // Save the head pointer to iterate
     struct Node *temHead = head;
-    while (temHead->ptr)
-    {
+    while (temHead->ptr) {
         temHead = temHead->ptr;
     }
 
@@ -50,41 +45,32 @@ int insertNode(int val)
     return 1;
 }
 
-int deleteAtBegin(struct Node **head)
-{
-
+int deleteAtBegin(struct Node **head) {
     //    No Node available in the LinkedList
-    if (*head == NULL)
-    {
-        printf(" No data available please use insertNode(int value) to add the data.");
+    if (*head == NULL) {
+        printf(
+            " No data available please use insertNode(int value) to add the "
+            "data.");
     }
 
     // If means only one Node exists delete that and store NULL in head
-    if ((*head)->ptr == NULL)
-    {     
+    if ((*head)->ptr == NULL) {
         free(*head);
-        *head=NULL;
+        *head = NULL;
         printf(" Now head is NULL \n ");
     }
 
-    struct Node *headCopy=*head ;
-    *head=(*head)->ptr ;
+    struct Node *headCopy = *head;
+    *head = (*head)->ptr;
     free(headCopy);
-
 }
 
 // Traverse the List
-void traverseList(struct Node *head)
-{
-
-    if (head == NULL)
-    {
+void traverseList(struct Node *head) {
+    if (head == NULL) {
         printf(" No data available \n ");
-    }
-    else
-    {
-        while (head)
-        {
+    } else {
+        while (head) {
             printf("-->(%d)", head->data);
             head = head->ptr;
         }
@@ -92,9 +78,7 @@ void traverseList(struct Node *head)
 }
 
 // Code Starts From here only
-int main()
-{
-
+int main() {
     insertNode(1);
     insertNode(2);
     deleteAtBegin(&head);
