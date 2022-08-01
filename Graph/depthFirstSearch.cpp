@@ -27,7 +27,7 @@ class Graph {
         visited[src] = true;
 
         for (auto e : graph[src]) {
-            if (visited[e] != false) {
+            if (visited[e] != true) {
                 dfs(e);
             }
         }
