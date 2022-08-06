@@ -110,4 +110,5 @@ int main() {
     insertAtEnd("hate");
     deleteAtEnd(&head);
     traverse(head);
+    cout<<"Done";
 }

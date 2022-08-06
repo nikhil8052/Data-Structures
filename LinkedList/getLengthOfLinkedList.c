@@ -67,4 +67,5 @@ int main() {
     insertNode(14);
     traverseList(head);
     printf("Length is %d .", len(head));
+    cout<<"Done";
 }

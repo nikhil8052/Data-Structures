@@ -85,4 +85,5 @@ int main() {
     insertNode(3);
     insertNode(4);
     traverseList(head);
+    cout<<"Done";
 }

@@ -107,5 +107,6 @@ int main() {
     }
 
     traverseList(head);
+    cout<<"Done";
 
 }
