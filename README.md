@@ -1,5 +1,17 @@
 # Let's Play With Data Structures 
 
+
+# Bit Manipulation 
+
+1. Check Even and Odd.
+
+2. Count Set Bits.
+
+3. Counts even and odd Numbers present in the array.
+
+4. Set the given bit of a number. 
+
+
 # Heap
 
 1. Build heap.
@@ -12,11 +24,8 @@
 
 2. Depth First Search. 
 
-# Matrix 
+3. Graph of users.
 
-1. Rotate Matrix Clock Wise.
-
-2. Sort Matrix Rows and Column Wise. 
 
 # Tress 
 
@@ -34,4 +43,18 @@
 
 7. Level Order Level Wise. 
 
+
+# matrix
+
+1. Rotate by 180 degree 
+
+2. Rotate by 90 degree 
+
+3. Transpose of matrix 
+
+4. Sort Rows 
+
+5. Sort Rows and Columns 
+
+6. Transpose Inplace
 
