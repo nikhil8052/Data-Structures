@@ -19,7 +19,7 @@ Output : 9 8 7
 using namespace std;
 
 // Rotate matrix by 180 degree.
-void rotateMatrix180Degree(vector<vector<int>> &matrix) {
+void rotateMatrix90Degree(vector<vector<int>> &matrix) {
     
     
 }
@@ -37,7 +37,7 @@ int main() {
         }
     }
 
-    rotateMatrix180Degree(matrix);
+    rotateMatrix90Degree(matrix);
 
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < size; j++) {
