@@ -1,3 +1,12 @@
+/* 
+  Expert Level Problem.
+  Median of two sorted arrays.
+  
+  Time Complexity must be O(log(n+m))
+
+*/
+
+#include <stdio.h>
 
 int max(int num1, int num2) { return (num1 > num2) ? num1 : num2; }
 
@@ -18,7 +27,7 @@ double median4(int a, int b, int c, int d) {
     long long int allsum = a + b + c + d;
     long long int allmax = max(a, max(b, max(c, d)));
     long long int allmin = min(a, min(b, min(c, d)));
-    return (double)allsum - allmin - allmax / 2;
+    return (double)(allsum - allmin - allmax) / 2;
 }
 
 // Find median of any array
@@ -74,9 +83,15 @@ double helpme(int* nums1, int nums1Size, int* nums2, int nums2Size) {
 
 double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2,
                               int nums2Size) {
-    if (nums1Size < nums2Size) {
+    if (nums1Size <= nums2Size) {
         return helpme(nums1, nums1Size, nums2, nums2Size);
     } else {
         return helpme(nums2, nums2Size, nums1, nums1Size);
     }
+}
+
+int main() {
+    int ar1[] = {1,2};
+    int ar2[] = { 3,4 };
+    printf("%f ",findMedianSortedArrays(ar1,2,ar2,2));
 }
