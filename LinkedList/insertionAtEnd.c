@@ -57,6 +57,8 @@ void traverseList(struct Node *head) {
     }
 }
 
+
+
 // Code Starts From here only
 int main() {
     insertNode(11);
@@ -64,4 +66,10 @@ int main() {
     insertNode(13);
     insertNode(14);
     traverseList(head);
+
+    // // Second Way
+    // insert(&head, 1);
+    // insert(&head, 1);
+    // insert(&head, 1);
+    // traverse(head);
 }
