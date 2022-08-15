@@ -2,8 +2,8 @@
 #include<vector>
 
 #define vi vector<int> 
-#define loop(n) for (int i = 0; i < n; i++)
-#define print(arr) fori(arr.size()){cout<<arr[i]<<" "; } 
+#define loop(n) for(int i = 0; i < n; i++)
+#define print(arr) loop(arr.size()){cout<<arr[i]<<" "; } 
 #define in(arr,n) loop(n){cin>>arr[i];}
 #define ll long long int 
 
