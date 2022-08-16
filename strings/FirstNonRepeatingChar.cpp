@@ -31,4 +31,6 @@ int main() {
     string str;
     cin >> str;
     cout << findIndex(str);
+    cout<<"Done";
+
 }

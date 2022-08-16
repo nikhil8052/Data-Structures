@@ -55,4 +55,6 @@ int main() {
     string str;
     cin >> str;
     cout << longestUniqueSubSquence(str);
+        cout<<"Done";
+
 }
