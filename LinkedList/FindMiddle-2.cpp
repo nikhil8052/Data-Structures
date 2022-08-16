@@ -64,4 +64,5 @@ int main() {
     insert(&head, 5);
     traverse(head);
     cout << endl << findMid(head);
+    cout<<"Done";
 }
