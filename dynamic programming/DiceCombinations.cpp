@@ -8,7 +8,7 @@
    Output : 4 
 
    Explanation : 3 
-   One way :-  1+1+ 
+   One way :-  1+1+1
    Second way:-  2+1
    Third Way :-  1+2
    Fourth Way:-  3
@@ -28,7 +28,7 @@ int main() {
     dp[0]=1;
     dp[1]=1;
 
-    for(int i=0; i<=n ; i++){
+    for(int i=2; i<=n ; i++){
         for(int j=1 ; j<=6 ; j++){
              if(j>i) continue; 
              dp[i]=dp[j-1]+dp[i-j];
