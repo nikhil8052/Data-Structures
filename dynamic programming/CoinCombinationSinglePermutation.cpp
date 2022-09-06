@@ -47,6 +47,8 @@ int main() {
     }
   
   cout<<dp[money];
+  cout<<"Status: Done";
+  
 
 }
 

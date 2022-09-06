@@ -2,5 +2,5 @@
 
 int main(){
 
-    printf(" %d ",(float)1/2);
+    printf(" %d ",7%10);
 }
