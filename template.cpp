@@ -14,5 +14,8 @@ using namespace std;
 int main() {
 
     // Start code from here 
+    int n ;
+    cin>>n;
+    cout<<n;
     
 }
