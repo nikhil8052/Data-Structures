@@ -27,17 +27,19 @@ void upheapify(vector<int> &heap, int index) {
     if (heap[parent] < heap[index]) {
         int tem = heap[parent];
         heap[parent] = heap[index];
-        heap[index] = heap[parent];
+        heap[index] = tem;
         upheapify(heap, parent);
 
-    } else
-        return;
+      
+
+    } else return;
+
 }
 
 int main() {
     int n, ele;
     cin >> n;
-    vector<int> heap(n);
+    vector<int> heap;
 
     // Take the element and add it to heap and perform the upheapify operation
     for (int i = 0; i < n; i++) {
@@ -50,5 +52,4 @@ int main() {
         cout << heap[i] << " ";
     }
 
-    cout<<"Done";
 }
